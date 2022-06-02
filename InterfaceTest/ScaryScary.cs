@@ -8,7 +8,7 @@ namespace InterfaceTest
 {
     public class ScaryScary : FunnyFunny, IScaryClown
     {
-        private int scaryThingCount;
+        private readonly int scaryThingCount;
 
         public string ScaryThingIHave { get { return $"pająki - {scaryThingCount}"; } }
 

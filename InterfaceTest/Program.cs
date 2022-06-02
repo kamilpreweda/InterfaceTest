@@ -1,32 +1,20 @@
-﻿namespace InterfaceTest
+﻿using InterfaceTest;
+
+namespace InterfaceTest
 {
-    public class TallGuy : IClown
-    {
-        public string Name;
-        public int Height;
-        public string FunnyThingIHave { get { return "wielkie buty"; } }
+    
 
-        public void TalkAboutYourself()
-        {
-            Console.WriteLine($"Nazywam się {Name}. Mam {Height} cm wzrostu.");
-        }
-
-        public void Honk()
-        {
-            Console.WriteLine("Bip, bip!");
-        }
-
-       
-        
     }
-    public class Program
+public class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        IClown fingersTheClown = new ScaryScary(14, "wielkie czerwone nosy");
+        fingersTheClown.Honk();
+        if (fingersTheClown is IScaryClown iScaryClownReference)
         {
-            TallGuy tallGuy = new TallGuy() { Height = 170, Name = "Kamil" };
-            tallGuy.TalkAboutYourself();
-            Console.WriteLine($"Ten wysoki gość ma {tallGuy.FunnyThingIHave}.");
-            tallGuy.Honk();
+            iScaryClownReference.ScareLittleChildren();
         }
+
     }
 }
