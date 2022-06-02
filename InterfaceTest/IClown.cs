@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InterfaceTest
 {
-    public interface IClown : IScaryClown
+    public interface IClown
     {
         public string FunnyThingIHave { get; }
         void Honk();
