@@ -16,5 +16,8 @@ public class Program
             iScaryClownReference.ScareLittleChildren();
         }
 
+        IClown.CarCapacity = 18;
+        Console.WriteLine(IClown.ClownCarDescription());
+
     }
 }
