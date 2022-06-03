@@ -13,7 +13,7 @@ public class Program
         fingersTheClown.Honk();
         if (fingersTheClown is IScaryClown iScaryClownReference)
         {
-            iScaryClownReference.ScareLittleChildren();
+            iScaryClownReference.ScareAdults();
         }
 
         IClown.CarCapacity = 18;
